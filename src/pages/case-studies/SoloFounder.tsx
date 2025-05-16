@@ -46,9 +46,9 @@ const SoloFounder = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Client Overview</h2>
               <p className="text-lg text-gray-700">
-                Rahul Khanna is the solo founder of FinEdge, a fintech startup that helps small businesses manage cash flow. 
-                After securing seed funding, Rahul needed to quickly build a core team of developers, marketers, and operations 
-                specialists to scale his MVP to a full-featured product. With no HR department and limited time, he faced the 
+                FinEdge is a fintech startup that helps small businesses manage cash flow. 
+                After securing seed funding, the founder needed to quickly build a core team of developers, marketers, and operations 
+                specialists to scale the MVP to a full-featured product. With no HR department and limited time, they faced the 
                 daunting task of hiring quality talent while still running day-to-day operations.
               </p>
             </div>
@@ -81,15 +81,15 @@ const SoloFounder = () => {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Time Constraints</h3>
                 <p className="text-gray-700">
-                  As a solo founder, Rahul was already working 14-hour days building the product, meeting investors,
-                  and acquiring early customers. He simply didn't have time to sift through hundreds of resumes.
+                  As a solo founder, they were already working 14-hour days building the product, meeting investors,
+                  and acquiring early customers. They simply didn't have time to sift through hundreds of resumes.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Volume of Applications</h3>
                 <p className="text-gray-700">
-                  After posting job openings on multiple platforms, Rahul received over 400 applications in just a few days,
+                  After posting job openings on multiple platforms, they received over 400 applications in just a few days,
                   creating an overwhelming backlog.
                 </p>
               </div>
@@ -97,7 +97,7 @@ const SoloFounder = () => {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Critical First Hires</h3>
                 <p className="text-gray-700">
-                  These initial team members would make or break his startup. He needed not just technical skills but 
+                  These initial team members would make or break the startup. They needed not just technical skills but 
                   also people who could wear multiple hats and thrive in a startup environment.
                 </p>
               </div>
@@ -105,7 +105,7 @@ const SoloFounder = () => {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">No Hiring Experience</h3>
                 <p className="text-gray-700">
-                  While an experienced product developer, Rahul had limited experience screening, interviewing, and assessing candidates,
+                  While an experienced product developer, the founder had limited experience screening, interviewing, and assessing candidates,
                   especially for non-technical roles.
                 </p>
               </div>
@@ -118,7 +118,7 @@ const SoloFounder = () => {
                 I ended up interviewing 6 people, but none were the right fit. Meanwhile, my product development was at a standstill, and
                 I was missing deadlines I'd promised to investors. I knew I needed help, but couldn't afford a full-time recruiter or agency."
                 <br /><br />
-                <em>— Rahul Khanna, Founder of FinEdge</em>
+                <em>— Founder of FinEdge</em>
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ const SoloFounder = () => {
             
             <div className="mb-12">
               <p className="text-lg text-gray-700">
-                After a 30-minute consultation with Rahul, VaraHR implemented a comprehensive AI-powered recruitment solution that allowed him
+                After a 30-minute consultation with the founder, VaraHR implemented a comprehensive AI-powered recruitment solution that allowed them
                 to find the perfect candidates without reading a single resume:
               </p>
             </div>
@@ -174,7 +174,7 @@ const SoloFounder = () => {
                 <h3 className="text-xl font-semibold mb-4">Automated Scheduling</h3>
                 <p className="text-gray-700">
                   The system automatically scheduled video interviews with the top 10 candidates based on assessment results,
-                  working around Rahul's limited availability.
+                  working around the founder's limited availability.
                 </p>
               </div>
               
@@ -186,8 +186,8 @@ const SoloFounder = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">AI Interview Assistant</h3>
                 <p className="text-gray-700">
-                  During video interviews, VaraHR provided Rahul with real-time question suggestions and analyzed candidate responses
-                  to help him make the best hiring decisions.
+                  During video interviews, VaraHR provided real-time question suggestions and analyzed candidate responses
+                  to help make the best hiring decisions.
                 </p>
               </div>
             </div>
@@ -204,7 +204,7 @@ const SoloFounder = () => {
                   <div>
                     <h4 className="font-medium">Day 1: Initial Consultation (30 minutes)</h4>
                     <p className="text-gray-700">
-                      Rahul explained his hiring needs and startup vision. VaraHR configured the AI system to his specific requirements.
+                      The founder explained their hiring needs and startup vision. VaraHR configured the AI system to specific requirements.
                     </p>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ const SoloFounder = () => {
                   <div>
                     <h4 className="font-medium">Day 2: Video Interviews (6 hours)</h4>
                     <p className="text-gray-700">
-                      Rahul conducted 8 video interviews with top performers, supported by VaraHR's AI interview assistant.
+                      The founder conducted 8 video interviews with top performers, supported by VaraHR's AI interview assistant.
                     </p>
                   </div>
                 </div>
@@ -260,7 +260,7 @@ const SoloFounder = () => {
                   <div>
                     <h4 className="font-medium">Day 2: Candidate Selection</h4>
                     <p className="text-gray-700">
-                      With comprehensive data on each candidate, Rahul confidently extended offers to his top 3 choices.
+                      With comprehensive data on each candidate, they confidently extended offers to their top 3 choices.
                     </p>
                   </div>
                 </div>
@@ -302,9 +302,9 @@ const SoloFounder = () => {
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Rapid Team Formation</h3>
                 <p className="text-gray-700">
-                  Within 24 hours, Rahul had extended offers to three exceptional candidates: a senior developer, 
-                  a growth marketer, and an operations specialist. All three accepted within a day, allowing him to 
-                  form his core team and resume product development immediately.
+                  Within 24 hours, the founder had extended offers to three exceptional candidates: a senior developer, 
+                  a growth marketer, and an operations specialist. All three accepted within a day, allowing them to 
+                  form their core team and resume product development immediately.
                 </p>
               </div>
               
@@ -319,8 +319,8 @@ const SoloFounder = () => {
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Founder Time Reclaimed</h3>
                 <p className="text-gray-700">
-                  Instead of spending weeks on recruitment, Rahul was able to focus on product development and investor relations. 
-                  The automated process saved him an estimated 39 hours of resume screening and initial interviews.
+                  Instead of spending weeks on recruitment, the founder was able to focus on product development and investor relations. 
+                  The automated process saved an estimated 39 hours of resume screening and initial interviews.
                 </p>
               </div>
               
@@ -345,8 +345,8 @@ const SoloFounder = () => {
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
                 <div>
-                  <h3 className="font-semibold">Rahul Khanna</h3>
-                  <p className="text-gray-700">Founder & CEO, FinEdge</p>
+                  <h3 className="font-semibold">Founder & CEO</h3>
+                  <p className="text-gray-700">FinEdge</p>
                 </div>
               </div>
               <blockquote className="text-xl italic text-gray-700">

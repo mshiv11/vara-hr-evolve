@@ -315,8 +315,8 @@ const MitrWork = () => {
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
                 <div>
-                  <h3 className="font-semibold">Aditya Sharma</h3>
-                  <p className="text-gray-700">Head of Talent Acquisition, Mitr.work</p>
+                  <h3 className="font-semibold">Head of Talent Acquisition</h3>
+                  <p className="text-gray-700">Mitr.work</p>
                 </div>
               </div>
               <blockquote className="text-xl italic text-gray-700">
