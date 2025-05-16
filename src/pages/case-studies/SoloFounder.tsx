@@ -46,7 +46,7 @@ const SoloFounder = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Client Overview</h2>
               <p className="text-lg text-gray-700">
-                FinEdge is a fintech startup that helps small businesses manage cash flow. 
+                A fintech startup that helps small businesses manage cash flow. 
                 After securing seed funding, the founder needed to quickly build a core team of developers, marketers, and operations 
                 specialists to scale the MVP to a full-featured product. With no HR department and limited time, they faced the 
                 daunting task of hiring quality talent while still running day-to-day operations.
@@ -118,7 +118,7 @@ const SoloFounder = () => {
                 I ended up interviewing 6 people, but none were the right fit. Meanwhile, my product development was at a standstill, and
                 I was missing deadlines I'd promised to investors. I knew I needed help, but couldn't afford a full-time recruiter or agency."
                 <br /><br />
-                <em>— Founder of FinEdge</em>
+                <em>— Founder</em>
               </p>
             </div>
           </div>
@@ -312,7 +312,7 @@ const SoloFounder = () => {
                 <h3 className="text-xl font-semibold mb-3">Quality Hires</h3>
                 <p className="text-gray-700">
                   The AI screening process identified candidates who not only had the right skills but also entrepreneurial mindsets. 
-                  All three hires quickly became valuable contributors, helping FinEdge exceed its product development milestones.
+                  All three hires quickly became valuable contributors, helping the startup exceed its product development milestones.
                 </p>
               </div>
               
@@ -327,7 +327,7 @@ const SoloFounder = () => {
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Long-term Business Impact</h3>
                 <p className="text-gray-700">
-                  With a strong core team in place, FinEdge successfully launched its product one week ahead of schedule. 
+                  With a strong core team in place, the startup successfully launched its product one week ahead of schedule. 
                   Within six months, they had secured an additional round of funding and grown to a team of twelve, 
                   using VaraHR for all subsequent hires.
                 </p>
@@ -346,7 +346,7 @@ const SoloFounder = () => {
                 <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
                 <div>
                   <h3 className="font-semibold">Founder & CEO</h3>
-                  <p className="text-gray-700">FinEdge</p>
+                  <p className="text-gray-700">Fintech Startup</p>
                 </div>
               </div>
               <blockquote className="text-xl italic text-gray-700">

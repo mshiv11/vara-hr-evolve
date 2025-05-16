@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -18,7 +17,7 @@ const MitrWork = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                How VaraHR Created a Custom Assessment for Mitr.work University Recruitment
+                How VaraHR Created a Custom Assessment for University Recruitment
               </h1>
               
               <p className="text-xl text-gray-700 mb-8">
@@ -46,7 +45,7 @@ const MitrWork = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Client Overview</h2>
               <p className="text-lg text-gray-700">
-                Mitr.work is a fast-growing tech company specializing in collaborative workflow solutions. 
+                A fast-growing tech company specializing in collaborative workflow solutions. 
                 With rapid expansion plans, they needed to hire a large number of entry-level developers and 
                 product managers from university campuses across India. However, they faced significant 
                 challenges in efficiently evaluating hundreds of candidates during campus recruitment drives.
@@ -130,7 +129,7 @@ const MitrWork = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Custom Assessment Platform</h3>
                 <p className="text-gray-700 mb-6">
-                  VaraHR developed a tailored assessment solution specifically for Mitr.work's campus recruitment needs:
+                  VaraHR developed a tailored assessment solution specifically for the client's campus recruitment needs:
                 </p>
                 <ul className="space-y-4">
                   <li className="flex">
@@ -163,7 +162,7 @@ const MitrWork = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-6">AI-Powered Analysis</h3>
                 <p className="text-gray-700 mb-6">
-                  VaraHR's AI capabilities transformed how Mitr.work evaluated candidates:
+                  VaraHR's AI capabilities transformed how the client evaluated candidates:
                 </p>
                 <ul className="space-y-4">
                   <li className="flex">
@@ -201,7 +200,7 @@ const MitrWork = () => {
                   <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
                   <div>
                     <p className="font-medium">Discovery & Requirement Analysis</p>
-                    <p className="text-gray-700">Understanding Mitr.work's specific hiring criteria and company values (2 weeks)</p>
+                    <p className="text-gray-700">Understanding the client's specific hiring criteria and company values (2 weeks)</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -316,7 +315,7 @@ const MitrWork = () => {
                 <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
                 <div>
                   <h3 className="font-semibold">Head of Talent Acquisition</h3>
-                  <p className="text-gray-700">Mitr.work</p>
+                  <p className="text-gray-700">Tech Company</p>
                 </div>
               </div>
               <blockquote className="text-xl italic text-gray-700">
