@@ -76,7 +76,7 @@ const MainNavigation = () => {
             <DropdownMenuContent className="bg-white">
               <DropdownMenuItem asChild>
                 <Link to="/case-studies/mitr-work" className="cursor-pointer">
-                  Mitr.work University Assessment
+                  University Assessment
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -92,8 +92,12 @@ const MainNavigation = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button asChild>
-            <Link to="/request-demo">Request Demo</Link>
+          <Button 
+            data-cal-link="mshiv/vara" 
+            data-cal-namespace="vara" 
+            data-cal-config='{"layout":"month_view"}'
+          >
+            Request Demo
           </Button>
         </div>
         
@@ -149,7 +153,7 @@ const MainNavigation = () => {
                     className="py-1 text-gray-700 hover:text-primary"
                     onClick={closeMenu}
                   >
-                    Mitr.work University Assessment
+                    University Assessment
                   </Link>
                   <Link 
                     to="/case-studies/solo-founder" 
@@ -168,10 +172,13 @@ const MainNavigation = () => {
                 FAQ
               </Link>
               <div className="mt-4">
-                <Button asChild className="w-full">
-                  <Link to="/request-demo" onClick={closeMenu}>
-                    Request Demo
-                  </Link>
+                <Button 
+                  className="w-full"
+                  data-cal-link="mshiv/vara" 
+                  data-cal-namespace="vara" 
+                  data-cal-config='{"layout":"month_view"}'
+                >
+                  Request Demo
                 </Button>
               </div>
             </div>

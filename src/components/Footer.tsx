@@ -20,6 +20,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors"
+                aria-label="Twitter profile"
               >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
@@ -29,6 +30,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors"
+                aria-label="LinkedIn profile"
               >
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
@@ -36,6 +38,7 @@ const Footer = () => {
               <a 
                 href="mailto:mshiv@varahr.com" 
                 className="text-gray-500 hover:text-primary transition-colors"
+                aria-label="Email us"
               >
                 <Mail size={20} />
                 <span className="sr-only">Email</span>
@@ -98,8 +101,12 @@ const Footer = () => {
               Email: <a href="mailto:mshiv@varahr.com" className="hover:text-primary">mshiv@varahr.com</a>
             </p>
             <div className="mt-6">
-              <Button asChild>
-                <Link to="/request-demo">Request Demo</Link>
+              <Button
+                data-cal-link="mshiv/vara" 
+                data-cal-namespace="vara" 
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Request Demo
               </Button>
             </div>
           </div>

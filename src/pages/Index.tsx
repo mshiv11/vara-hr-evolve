@@ -110,8 +110,14 @@ const Index = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="px-8">
-                  <Link to="/request-demo">Request Demo</Link>
+                <Button 
+                  size="lg" 
+                  className="px-8"
+                  data-cal-link="mshiv/vara" 
+                  data-cal-namespace="vara" 
+                  data-cal-config='{"layout":"month_view"}'
+                >
+                  Request Demo
                 </Button>
                 <Button asChild size="lg" variant="outline" className="px-8">
                   <Link to="/case-studies/solo-founder">View Case Studies</Link>
@@ -391,8 +397,15 @@ const Index = () => {
             <p className="text-xl mb-8">
               Join hundreds of companies using VaraHR to find better candidates faster.
             </p>
-            <Button asChild size="lg" variant="secondary" className="px-8">
-              <Link to="/request-demo">Request Your Free Demo</Link>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="px-8"
+              data-cal-link="mshiv/vara" 
+              data-cal-namespace="vara" 
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Request Your Free Demo
             </Button>
           </div>
         </div>
@@ -463,8 +476,14 @@ const Index = () => {
             <p className="text-xl text-gray-700 mb-8">
               Join the recruitment revolution with VaraHR's AI-powered agency solutions.
             </p>
-            <Button asChild size="lg" className="px-8">
-              <Link to="/request-demo">Request Demo</Link>
+            <Button 
+              size="lg" 
+              className="px-8"
+              data-cal-link="mshiv/vara" 
+              data-cal-namespace="vara" 
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Request Demo
             </Button>
           </div>
         </div>
