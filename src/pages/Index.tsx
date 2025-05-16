@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -33,11 +32,11 @@ const FeatureCard = ({ icon: Icon, title, description, link }: { icon: React.Ele
   </Link>
 );
 
-// Stats component
+// Stats component with improved visibility
 const Statistic = ({ value, label }: { value: string, label: string }) => (
   <div className="text-center">
-    <p className="text-3xl md:text-4xl font-bold text-primary">{value}</p>
-    <p className="text-gray-600 mt-1">{label}</p>
+    <p className="text-3xl md:text-4xl font-bold text-white">{value}</p>
+    <p className="text-white mt-1">{label}</p>
   </div>
 );
 
@@ -187,10 +186,10 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Stats Section */}
+      {/* Stats Section with improved contrast */}
       <section className="py-16 bg-primary">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Statistic value="30,000+" label="Interviews Conducted" />
             <Statistic value="93%" label="Candidate Match Accuracy" />
             <Statistic value="80%" label="Time Saved in Hiring" />
