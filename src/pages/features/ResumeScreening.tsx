@@ -1,8 +1,9 @@
 
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { CheckCircle, UserCheck } from "lucide-react";
 import MainLayout from "@/components/MainLayout";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, UserCheck, ChevronRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ResumeScreening = () => {
   return (
@@ -10,32 +11,40 @@ const ResumeScreening = () => {
       {/* Hero Section */}
       <section className="pt-16 pb-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block mb-4">
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full font-medium text-sm">
-                  Feature
-                </span>
-              </div>
-              
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                Intelligent Resume Screening
+                <span className="text-primary">Intelligent</span> Resume Screening
               </h1>
-              
               <p className="text-xl text-gray-700 mb-8">
-                Stop spending hours manually reviewing resumes. Our AI can process hundreds of applications in minutes, identifying the most qualified candidates with 93% accuracy.
+                Stop drowning in resumes. Our AI-powered resume screening solution helps you identify the best candidates in minutes, not days.
               </p>
               
-              <Button asChild size="lg" className="px-8">
-                <Link to="/request-demo">See It In Action</Link>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <CheckCircle size={20} className="text-primary mt-1 mr-3 flex-shrink-0" />
+                  <span>Automatically identify the most qualified candidates based on your specific requirements</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={20} className="text-primary mt-1 mr-3 flex-shrink-0" />
+                  <span>Rank candidates by fit with customizable scoring criteria</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={20} className="text-primary mt-1 mr-3 flex-shrink-0" />
+                  <span>Eliminate bias with objective skill-based assessment</span>
+                </li>
+              </ul>
+              
+              <Button asChild size="lg">
+                <Link to="/request-demo">Request Demo</Link>
               </Button>
             </div>
             
-            <div className="order-first md:order-last">
-              <div className="rounded-xl overflow-hidden shadow-xl">
+            <div className="order-first lg:order-last">
+              <div className="rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
-                  alt="Intelligent Resume Screening" 
+                  src="https://images.unsplash.com/photo-1516383607781-913a19294fd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                  alt="Resume screening automation" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -43,198 +52,264 @@ const ResumeScreening = () => {
           </div>
         </div>
       </section>
-
-      {/* Key Benefits Section */}
-      <section className="py-16">
+      
+      {/* How It Works */}
+      <section className="py-20">
         <div className="container">
-          <div className="max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-6 text-center">Resume Screening Reimagined</h2>
-            <p className="text-xl text-gray-700 text-center">
-              Eliminate the bottleneck in your hiring process with intelligent resume screening.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                <UserCheck size={24} className="text-red-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">The Problem</h3>
-              <p className="text-gray-700">
-                Manually reviewing hundreds of resumes is time-consuming, prone to bias, and often leads to missing the best candidates.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                <UserCheck size={24} className="text-yellow-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Common Approaches</h3>
-              <p className="text-gray-700">
-                Basic keyword screening or outsourcing to agencies that still rely on manual processes and subjective evaluations.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <UserCheck size={24} className="text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">VaraHR Solution</h3>
-              <p className="text-gray-700">
-                AI-powered screening that evaluates skills, experience, and cultural fit, ranking candidates by match score with 93% accuracy.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Details Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-last md:order-first">
-              <div className="rounded-xl overflow-hidden shadow-md">
-                <img 
-                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80" 
-                  alt="VaraHR Resume Screening Interface" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Identify Your Ideal Candidates Faster</h2>
-              
-              <div className="space-y-6">
-                <div className="flex">
-                  <CheckCircle size={24} className="text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Bulk Processing</h3>
-                    <p className="text-gray-700">
-                      Process hundreds or even thousands of resumes in minutes, not days, saving your team valuable time.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex">
-                  <CheckCircle size={24} className="text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Skill Matching</h3>
-                    <p className="text-gray-700">
-                      Our AI goes beyond keywords to understand context, identifying candidates with the right skills, even if they use different terminology.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex">
-                  <CheckCircle size={24} className="text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Bias Reduction</h3>
-                    <p className="text-gray-700">
-                      Our algorithms are designed to focus on relevant skills and experience, not demographics, helping you build more diverse teams.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex">
-                  <CheckCircle size={24} className="text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Candidate Ranking</h3>
-                    <p className="text-gray-700">
-                      Get a prioritized list of candidates ranked by match score, with detailed explanations of why they're a good fit.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-16">
-        <div className="container">
-          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/3 bg-primary">
-                <div className="h-full flex items-center justify-center p-8">
-                  <div className="text-white text-center">
-                    <div className="text-5xl font-bold mb-2">80%</div>
-                    <p className="text-white/80">Reduction in screening time</p>
-                  </div>
-                </div>
-              </div>
-              <div className="p-8 md:p-12 md:w-2/3">
-                <p className="text-xl text-gray-600 italic mb-6">
-                  "Before VaraHR, screening resumes was our biggest bottleneck. Now, our team can focus on engaging with top candidates instead of sifting through hundreds of unqualified applications."
-                </p>
-                <div>
-                  <p className="font-medium text-gray-900">Vikram Mehta</p>
-                  <p className="text-gray-600">Recruitment Manager, CloudTech Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container">
-          <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-6">How It Works</h2>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">How Our Resume Screening Works</h2>
             <p className="text-xl text-gray-700">
-              Streamline your resume screening process in three simple steps
+              We build custom AI-powered tools that seamlessly integrate with your workflow to automatically screen and rank candidates.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-bold">1</span>
+            <Card>
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-primary font-bold text-xl">1</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Custom Configuration</h3>
+                <p className="text-gray-700">
+                  We work with you to understand your specific job requirements, must-have skills, and organizational values.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-primary font-bold text-xl">2</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Tally Form Implementation</h3>
+                <p className="text-gray-700">
+                  We build a custom Tally form that collects and pre-processes candidate information, automatically filtering and scoring applications.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-primary font-bold text-xl">3</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Google Sheet Dashboard</h3>
+                <p className="text-gray-700">
+                  Your custom Google Sheet automatically ranks candidates, providing visualization of top talent and key insights for decision-making.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      
+      {/* Key Features */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Key Features</h2>
+            <p className="text-xl text-gray-700">
+              Our AI-powered resume screening solutions are designed to make your hiring process faster, more accurate, and bias-free.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <UserCheck size={24} className="text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Upload Resumes</h3>
+              <h3 className="text-xl font-bold mb-3">Custom Scoring Logic</h3>
               <p className="text-gray-700">
-                Bulk upload resumes from your ATS or directly from job boards in any format (PDF, Word, etc.).
+                Automatically evaluate candidates based on criteria that matter specifically to your company and role.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-bold">2</span>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <UserCheck size={24} className="text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">AI Analysis</h3>
+              <h3 className="text-xl font-bold mb-3">Skill Matching</h3>
               <p className="text-gray-700">
-                Our AI processes all resumes, evaluating skills, experience, education, and potential culture fit.
+                Identify candidates with the specific skills and experiences that match your job requirements.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-bold">3</span>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <UserCheck size={24} className="text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Ranked Results</h3>
+              <h3 className="text-xl font-bold mb-3">Automated Filtering</h3>
               <p className="text-gray-700">
-                Review a prioritized list of candidates with match scores and detailed analysis of their qualifications.
+                Pre-screen candidates based on must-have qualifications and experience requirements.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <UserCheck size={24} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Visual Candidate Ranking</h3>
+              <p className="text-gray-700">
+                Instantly see your top candidates ranked by fit score in an easy-to-use spreadsheet interface.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <UserCheck size={24} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Bias Mitigation</h3>
+              <p className="text-gray-700">
+                Focus on skills and qualifications with built-in tools to reduce unconscious bias in the screening process.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <UserCheck size={24} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Team Collaboration</h3>
+              <p className="text-gray-700">
+                Enable your entire hiring team to review, comment, and collaborate on candidate assessment in real-time.
               </p>
             </div>
           </div>
         </div>
       </section>
-
+      
+      {/* Deliverables */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">What You'll Receive</h2>
+            <p className="text-xl text-gray-700">
+              Our AI-powered resume screening solutions include everything you need to transform your candidate evaluation process.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
+              <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <img 
+                  src="https://tally.so/favicon/favicon.svg" 
+                  alt="Tally Forms" 
+                  className="h-8 w-8"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-center">Custom Tally Form Solution</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Branded application form with your company logo and design</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>AI-powered pre-screening questions that evaluate candidate fit</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Automatic filtering of unqualified candidates</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Custom thank you and follow-up messages</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
+              <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <img 
+                  src="https://cdn.cdnlogo.com/logos/g/35/google-sheets.svg" 
+                  alt="Google Sheets" 
+                  className="h-8 w-8"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-center">Resume Analysis Dashboard</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Custom Google Sheet with automatic candidate ranking</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Visual dashboard showing top candidates at a glance</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Collaborative tools for team feedback and notes</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Export and reporting capabilities</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
+      <section className="py-20 bg-primary">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl font-bold mb-6">
-              Ready to Transform Your Resume Screening Process?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Resume Screening Process?</h2>
             <p className="text-xl mb-8">
-              See how VaraHR can help you find the best candidates faster and more accurately.
+              Let us show you how our AI-powered resume screening can save you time and help you find the best candidates.
             </p>
             <Button asChild size="lg" variant="secondary" className="px-8">
-              <Link to="/request-demo">Request a Demo</Link>
+              <Link to="/request-demo">Request Demo</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+      
+      {/* Related Features */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Explore Related Solutions</h2>
+            <p className="text-xl text-gray-700">
+              Discover our other AI-powered recruitment tools that work together to transform your hiring process.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="hover:shadow-md transition-all">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold mb-3">Automated Job Descriptions</h3>
+                <p className="text-gray-700 mb-4">
+                  Create compelling, bias-free job descriptions that attract top talent.
+                </p>
+                <Link to="/features/job-descriptions" className="text-primary font-medium flex items-center">
+                  Learn more <ChevronRight size={16} className="ml-1" />
+                </Link>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-all">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold mb-3">Custom Skills Assessments</h3>
+                <p className="text-gray-700 mb-4">
+                  Evaluate candidates with tailored assessments for any role or skill set.
+                </p>
+                <Link to="/features/skills-assessments" className="text-primary font-medium flex items-center">
+                  Learn more <ChevronRight size={16} className="ml-1" />
+                </Link>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-md transition-all">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold mb-3">Candidate Dashboard</h3>
+                <p className="text-gray-700 mb-4">
+                  Track and manage your entire recruitment pipeline with real-time analytics.
+                </p>
+                <Link to="/features/candidate-dashboard" className="text-primary font-medium flex items-center">
+                  Learn more <ChevronRight size={16} className="ml-1" />
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

@@ -2,15 +2,19 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
-import { CheckCircle, ChevronRight, FileCheck, UserCheck, BarChart3, Users } from "lucide-react";
+import { CheckCircle, ChevronRight, FileCheck, UserCheck, BarChart3, Users, Star } from "lucide-react";
 
 // Testimonial component
-const Testimonial = ({ quote, name, position, company }: { quote: string, name: string, position: string, company: string }) => (
+const Testimonial = ({ quote, name, stars = 5 }: { quote: string, name: string, stars?: number }) => (
   <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-sm">
     <p className="text-gray-600 italic mb-4">{quote}</p>
     <div>
       <p className="font-medium text-gray-900">{name}</p>
-      <p className="text-gray-600 text-sm">{position}, {company}</p>
+      <div className="flex mt-2">
+        {Array.from({ length: stars }).map((_, i) => (
+          <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+        ))}
+      </div>
     </div>
   </div>
 );
@@ -35,6 +39,37 @@ const Statistic = ({ value, label }: { value: string, label: string }) => (
     <p className="text-3xl md:text-4xl font-bold text-primary">{value}</p>
     <p className="text-gray-600 mt-1">{label}</p>
   </div>
+);
+
+// Featured in publications component
+const FeaturedIn = () => (
+  <section className="py-12 bg-gray-50">
+    <div className="container">
+      <h3 className="text-center text-lg font-medium text-gray-700 mb-8">Featured In</h3>
+      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <img 
+          src="https://varahr.com/assets/images/digital-journal-logo-removebg-preview-2-240x240.webp" 
+          alt="Digital Journal" 
+          className="h-12 md:h-16 w-auto object-contain"
+        />
+        <img 
+          src="https://varahr.com/assets/images/associated-press-logo-1982-240x135.webp" 
+          alt="Associated Press" 
+          className="h-10 md:h-14 w-auto object-contain"
+        />
+        <img 
+          src="https://varahr.com/assets/images/pngwing.com1-1-240x69.webp" 
+          alt="Times of India" 
+          className="h-8 md:h-12 w-auto object-contain"
+        />
+        <img 
+          src="https://varahr.com/assets/images/fox40-removebg-preview-1-240x82.webp" 
+          alt="Fox40" 
+          className="h-10 md:h-14 w-auto object-contain"
+        />
+      </div>
+    </div>
+  </section>
 );
 
 const Index = () => {
@@ -97,6 +132,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Featured In Section */}
+      <FeaturedIn />
       
       {/* Problem Statement Section */}
       <section className="py-20">
@@ -167,7 +205,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Powerful Features for Modern Recruiters</h2>
             <p className="text-xl text-gray-700">
-              Our AI-powered platform streamlines every step of your recruitment process,
+              Our AI-powered agency solutions streamline every step of your recruitment process,
               helping you find the right talent faster and more accurately.
             </p>
           </div>
@@ -201,13 +239,83 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Case Studies Preview Section */}
+      {/* Deliverables Section - New */}
       <section className="py-20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our AI-Powered Deliverables</h2>
+            <p className="text-xl text-gray-700">
+              Practical, ready-to-use tools that transform your hiring process without requiring technical expertise.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
+              <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <img 
+                  src="https://cdn.cdnlogo.com/logos/g/35/google-sheets.svg" 
+                  alt="Google Sheets" 
+                  className="h-8 w-8"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-center">Custom Google Sheet Solutions</h3>
+              <p className="text-gray-700 mb-6">
+                Ready-to-use spreadsheet systems with built-in automations for candidate tracking, skills assessment scoring, and interview management. No technical setup required.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Candidate scoring and ranking automation</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Pre-built interview scorecards</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Visual dashboards for hiring analytics</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
+              <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <img 
+                  src="https://tally.so/favicon/favicon.svg" 
+                  alt="Tally Forms" 
+                  className="h-8 w-8"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-center">Tally Form Screening Systems</h3>
+              <p className="text-gray-700 mb-6">
+                Custom-built forms with intelligent filtering logic that automatically pre-screens candidates and routes them into your workflow based on your unique criteria.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>AI-powered skills qualification forms</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Automated candidate filtering</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={18} className="text-primary mt-1 mr-2 flex-shrink-0" />
+                  <span>Direct integration with Google Sheets</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Case Studies Preview Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Real Results, Real Companies</h2>
             <p className="text-xl text-gray-700">
-              See how leading organizations have transformed their hiring process with VaraHR.
+              See how leading organizations have transformed their hiring process with VaraHR's agency solutions.
             </p>
           </div>
           
@@ -253,8 +361,8 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Testimonials Section - Updated with new testimonials */}
+      <section className="py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">What Our Clients Say</h2>
@@ -263,24 +371,14 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Testimonial 
-              quote="VaraHR has completely transformed how we recruit. We've cut our time-to-hire by 75% while finding better candidates."
-              name="Priya Sharma"
-              position="Head of Talent Acquisition"
-              company="Mindtree"
+              quote="VaraHR transformed our hiring process completely. We've cut our time-to-hire by 70% and haven't made a bad hire since implementing their system. The candidate feedback has been overwhelmingly positive too."
+              name="Jennie Noteboom"
             />
             <Testimonial 
-              quote="As a solo founder, hiring used to consume all my time. VaraHR's AI screening saved me weeks of work and found amazing talent."
-              name="Rahul Khanna"
-              position="Founder & CEO"
-              company="FinTech Startup"
-            />
-            <Testimonial 
-              quote="The custom skills assessments are a game-changer. We now have objective data on candidates before they even reach the interview stage."
-              name="Ananya Patel"
-              position="HR Director"
-              company="Global Services Inc."
+              quote="As a growing startup, we needed to hire quickly without sacrificing quality. VaraHR's AI-powered system helped us compete for top talent against much larger companies. The custom assessments have been particularly valuable in identifying candidates with the right skills."
+              name="Mike Jason"
             />
           </div>
         </div>
@@ -314,37 +412,37 @@ const Index = () => {
             
             <div className="space-y-6">
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h3 className="text-lg font-semibold mb-3">How does VaraHR's AI technology work?</h3>
+                <h3 className="text-lg font-semibold mb-3">How does VaraHR's AI recruitment services work?</h3>
                 <p className="text-gray-700">
-                  VaraHR uses advanced machine learning algorithms trained on millions of hiring outcomes to match candidates to roles based on skills, experience, and cultural fit. Our technology continuously learns and improves from your feedback and hiring decisions.
+                  VaraHR's agency approach combines advanced AI tools with human expertise to create custom solutions for your recruitment challenges. We develop tailored Google Sheets and Tally forms that automate candidate filtering, assessment, and tracking - all designed specifically for your hiring needs and team workflow.
                 </p>
               </div>
               
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h3 className="text-lg font-semibold mb-3">Is VaraHR suitable for all company sizes?</h3>
                 <p className="text-gray-700">
-                  Yes, VaraHR is designed to scale with your needs. Whether you're a startup making your first hire or an enterprise processing thousands of applications, our platform can be tailored to your specific requirements and hiring volume.
+                  Yes, our solutions are designed to scale with your needs. Whether you're a startup making your first hire or an enterprise processing thousands of applications, our custom Google Sheets and Tally forms can be tailored to your specific requirements and hiring volume.
                 </p>
               </div>
               
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h3 className="text-lg font-semibold mb-3">How long does it take to implement VaraHR?</h3>
+                <h3 className="text-lg font-semibold mb-3">How long does it take to implement VaraHR's solutions?</h3>
                 <p className="text-gray-700">
-                  Most clients are up and running within 48 hours. Our onboarding team will guide you through the setup process, help integrate with your existing ATS if needed, and provide training for your team to ensure a smooth transition.
+                  Most clients are up and running within 48 hours. Our team will help set up your custom Google Sheets and Tally forms, provide training for your team, and ensure a smooth transition to your new AI-powered hiring workflow.
                 </p>
               </div>
               
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h3 className="text-lg font-semibold mb-3">How does VaraHR handle bias in recruiting?</h3>
                 <p className="text-gray-700">
-                  We've built our AI with fairness at its core. Our algorithms are regularly audited for bias and designed to focus on skills and qualifications while ignoring irrelevant personal characteristics. We also provide bias detection tools to help make your job descriptions and assessments more inclusive.
+                  We've built our solutions with fairness at their core. Our algorithms and assessment frameworks are designed to focus on skills and qualifications while ignoring irrelevant personal characteristics. We also provide bias detection tools to help make your job descriptions and assessments more inclusive.
                 </p>
               </div>
               
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h3 className="text-lg font-semibold mb-3">Can VaraHR integrate with my existing ATS?</h3>
                 <p className="text-gray-700">
-                  Yes, VaraHR integrates seamlessly with most popular ATS platforms, including Greenhouse, Lever, Workday, and more. Our team will work with you to ensure a smooth integration with your existing recruitment tech stack.
+                  While our solutions are standalone Google Sheets and Tally forms, they're designed to complement your existing recruitment tech stack. Our team will work with you to ensure your new tools integrate seamlessly with your current workflow and systems.
                 </p>
               </div>
               
@@ -364,7 +462,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Start Transforming Your Hiring Today</h2>
             <p className="text-xl text-gray-700 mb-8">
-              Join the recruitment revolution with VaraHR's AI-powered solutions.
+              Join the recruitment revolution with VaraHR's AI-powered agency solutions.
             </p>
             <Button asChild size="lg" className="px-8">
               <Link to="/request-demo">Request Demo</Link>
