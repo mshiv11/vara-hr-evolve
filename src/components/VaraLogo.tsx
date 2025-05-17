@@ -7,17 +7,14 @@ interface LogoProps {
 
 const VaraLogo = ({ className }: LogoProps) => {
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex items-center", className)}>
       <div className="bg-white p-1 rounded">
         <img 
           src="https://varahr.com/assets/images/varahr-logo-96x96.webp" 
-          alt="VaraHR Logo" 
-          width="36" 
-          height="36" 
-          className="h-9 w-auto"
+          alt="VaraHR Logo"
+          className="h-full w-auto"
         />
       </div>
-      <span className="font-bold text-xl tracking-tight text-black">VaraHR</span>
     </div>
   );
 };

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import VaraLogo from "./VaraLogo";
 import { Menu, X } from "lucide-react";
-import { useMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const MainNavigation = () => {
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -26,7 +26,7 @@ const MainNavigation = () => {
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container py-4 flex items-center justify-between relative">
         <Link to="/" className="flex items-center space-x-2">
-          <VaraLogo size={isMobile ? 28 : 32} />
+          <VaraLogo className={isMobile ? "h-7 w-7" : "h-8 w-8"} />
           <span className="text-lg md:text-xl font-bold">VaraHR</span>
         </Link>
 
