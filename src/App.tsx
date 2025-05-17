@@ -12,6 +12,7 @@ import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Pricing from "./pages/Pricing";
+import RequestDemo from "./pages/RequestDemo";
 
 // Feature pages
 import JobDescriptions from "./pages/features/JobDescriptions";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/request-demo" element={<RequestDemo />} />
           
           {/* Feature Pages */}
           <Route path="/features/job-descriptions" element={<JobDescriptions />} />

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, FileText } from "lucide-react";
@@ -26,8 +25,15 @@ const JobDescriptions = () => {
                 Create compelling, inclusive job descriptions in minutes, not hours. Our AI helps you craft descriptions that attract top talent and improve your conversion rates.
               </p>
               
-              <Button asChild size="lg" className="px-8">
-                <Link to="/request-demo">See It In Action</Link>
+              <Button 
+                asChild 
+                size="lg" 
+                className="px-8"
+                data-cal-link="mshiv/vara" 
+                data-cal-namespace="vara" 
+                data-cal-config='{"layout":"month_view"}'
+              >
+                <span>See It In Action</span>
               </Button>
             </div>
             
@@ -230,8 +236,15 @@ const JobDescriptions = () => {
             <p className="text-xl mb-8">
               See how VaraHR can help you attract better candidates with compelling job descriptions.
             </p>
-            <Button asChild size="lg" variant="secondary" className="px-8">
-              <Link to="/request-demo">Request a Demo</Link>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="px-8"
+              data-cal-link="mshiv/vara" 
+              data-cal-namespace="vara" 
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Request a Demo
             </Button>
           </div>
         </div>

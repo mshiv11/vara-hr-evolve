@@ -81,6 +81,7 @@ const MainNavigation = () => {
                 data-cal-link="mshiv/vara" 
                 data-cal-namespace="vara" 
                 data-cal-config='{"layout":"month_view"}'
+                onClick={() => setIsMenuOpen(false)}
               >
                 Get Started
               </Button>
