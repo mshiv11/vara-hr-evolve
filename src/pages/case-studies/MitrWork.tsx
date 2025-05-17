@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -52,7 +53,7 @@ const MitrWork = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">Industry</h3>
                 <p>Technology</p>
@@ -60,10 +61,6 @@ const MitrWork = () => {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">Company Size</h3>
                 <p>150+ employees</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">Location</h3>
-                <p>Multiple offices across India</p>
               </div>
             </div>
           </div>
@@ -80,7 +77,7 @@ const MitrWork = () => {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">Volume of Candidates</h3>
                 <p className="text-gray-700">
-                  Mitr.work needed to evaluate 500+ students per campus visit, creating a logistical 
+                  They needed to evaluate 500+ students per campus visit, creating a logistical 
                   challenge for their small HR team.
                 </p>
               </div>
@@ -111,7 +108,7 @@ const MitrWork = () => {
               <h3 className="text-xl font-semibold mb-4">The Breaking Point</h3>
               <p className="text-gray-700">
                 After a particularly challenging recruitment drive where they spent three weeks processing assessments
-                only to make just five offers—with three candidates declining—Mitr.work realized their approach was 
+                only to make just five offers—with three candidates declining—they realized their approach was 
                 unsustainable. They needed a more efficient solution that could scale with their hiring needs.
               </p>
             </div>
@@ -272,7 +269,7 @@ const MitrWork = () => {
                 <div>
                   <h4 className="font-medium mb-2">Efficient Campus Recruitment</h4>
                   <p className="text-gray-700">
-                    Mitr.work could now process assessments for 500+ students in just 24 hours, with immediate 
+                    They could now process assessments for 500+ students in just 24 hours, with immediate 
                     results and analysis available to the hiring team.
                   </p>
                 </div>
@@ -297,7 +294,7 @@ const MitrWork = () => {
                   <h4 className="font-medium mb-2">Long-term Retention</h4>
                   <p className="text-gray-700">
                     By better matching candidates to roles that suited their skills and work preferences,
-                    Mitr.work saw a significant improvement in new hire retention rates.
+                    they saw a significant improvement in new hire retention rates.
                   </p>
                 </div>
               </div>
@@ -339,8 +336,15 @@ const MitrWork = () => {
             <p className="text-xl mb-8">
               Learn how VaraHR can create a custom assessment solution for your unique hiring needs.
             </p>
-            <Button asChild size="lg" variant="secondary" className="px-8">
-              <Link to="/request-demo">Request a Demo</Link>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="px-8"
+              data-cal-link="mshiv/vara" 
+              data-cal-namespace="vara" 
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Request a Demo
             </Button>
           </div>
         </div>

@@ -62,10 +62,6 @@ const SoloFounder = () => {
                 <h3 className="text-xl font-semibold mb-3">Company Size</h3>
                 <p>Solo founder (pre-hiring)</p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">Location</h3>
-                <p>Bengaluru, India</p>
-              </div>
             </div>
           </div>
         </div>
@@ -370,8 +366,15 @@ const SoloFounder = () => {
             <p className="text-xl mb-8">
               Whether you're a solo founder or leading a growing team, VaraHR can help you find the right talent faster.
             </p>
-            <Button asChild size="lg" variant="secondary" className="px-8">
-              <Link to="/request-demo">Request a Demo</Link>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="px-8"
+              data-cal-link="mshiv/vara" 
+              data-cal-namespace="vara" 
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Request a Demo
             </Button>
           </div>
         </div>

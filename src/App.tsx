@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Pricing from "./pages/Pricing";
 
 // Feature pages
 import JobDescriptions from "./pages/features/JobDescriptions";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/pricing" element={<Pricing />} />
           
           {/* Feature Pages */}
           <Route path="/features/job-descriptions" element={<JobDescriptions />} />
