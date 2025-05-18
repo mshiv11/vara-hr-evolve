@@ -272,7 +272,7 @@ const Index = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
               <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <img 
-                  src="https://tally.so/images/logo-icon.svg" 
+                  src="https://tally.so/images/logo_v2.png" 
                   alt="Tally Forms" 
                   className="h-8 w-8"
                 />
