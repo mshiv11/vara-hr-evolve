@@ -1,22 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
-import { CheckCircle, ChevronRight, FileCheck, UserCheck, BarChart3, Users, Star } from "lucide-react";
-
-// Testimonial component
-const Testimonial = ({ quote, name, stars = 5 }: { quote: string, name: string, stars?: number }) => (
-  <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-sm">
-    <p className="text-gray-600 italic mb-4">{quote}</p>
-    <div>
-      <p className="font-medium text-gray-900">{name}</p>
-      <div className="flex mt-2">
-        {Array.from({ length: stars }).map((_, i) => (
-          <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
-        ))}
-      </div>
-    </div>
-  </div>
-);
+import { CheckCircle, ChevronRight, FileCheck, UserCheck, BarChart3, Users } from "lucide-react";
 
 // Feature Card Component
 const FeatureCard = ({ icon: Icon, title, description, link }: { icon: React.ElementType, title: string, description: string, link: string }) => (
@@ -258,7 +244,7 @@ const Index = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
               <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <img 
-                  src="https://cdn.cdnlogo.com/logos/g/35/google-sheets.svg" 
+                  src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png" 
                   alt="Google Sheets" 
                   className="h-8 w-8"
                 />
@@ -286,7 +272,7 @@ const Index = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
               <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <img 
-                  src="https://tally.so/favicon/favicon.svg" 
+                  src="https://tally.so/images/logo-icon.svg" 
                   alt="Tally Forms" 
                   className="h-8 w-8"
                 />
@@ -334,9 +320,9 @@ const Index = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3">Mitr.work University Assessment Case Study</h3>
+                <h3 className="text-2xl font-bold mb-3">Buik Hiring University Assessment Case Study</h3>
                 <p className="text-gray-700 mb-6">
-                  How VaraHR created a custom assessment solution for Mitr.work to efficiently evaluate hundreds of students during university recruitment drives.
+                  How VaraHR created a custom assessment solution for Buik Hiring to efficiently evaluate hundreds of students during university recruitment drives.
                 </p>
                 <Button asChild variant="outline">
                   <Link to="/case-studies/mitr-work">Read Case Study</Link>
@@ -362,29 +348,6 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials Section - Updated with new testimonials */}
-      <section className="py-20">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">What Our Clients Say</h2>
-            <p className="text-xl text-gray-700">
-              Join hundreds of satisfied HR professionals and recruiters who have transformed their hiring process with VaraHR.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Testimonial 
-              quote="VaraHR transformed our hiring process completely. We've cut our time-to-hire by 70% and haven't made a bad hire since implementing their system. The candidate feedback has been overwhelmingly positive too."
-              name="Jennie Noteboom"
-            />
-            <Testimonial 
-              quote="As a growing startup, we needed to hire quickly without sacrificing quality. VaraHR's AI-powered system helped us compete for top talent against much larger companies. The custom assessments have been particularly valuable in identifying candidates with the right skills."
-              name="Mike Jason"
-            />
           </div>
         </div>
       </section>

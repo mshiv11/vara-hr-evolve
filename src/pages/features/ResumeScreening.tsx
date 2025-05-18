@@ -35,8 +35,13 @@ const ResumeScreening = () => {
                 </li>
               </ul>
               
-              <Button asChild size="lg">
-                <Link to="/request-demo">Request Demo</Link>
+              <Button 
+                size="lg"
+                data-cal-link="mshiv/vara" 
+                data-cal-namespace="vara" 
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Request Demo
               </Button>
             </div>
             
@@ -191,7 +196,7 @@ const ResumeScreening = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
               <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <img 
-                  src="https://tally.so/favicon/favicon.svg" 
+                  src="https://tally.so/images/logo-icon.svg" 
                   alt="Tally Forms" 
                   className="h-8 w-8"
                 />
@@ -220,7 +225,7 @@ const ResumeScreening = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
               <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <img 
-                  src="https://cdn.cdnlogo.com/logos/g/35/google-sheets.svg" 
+                  src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png" 
                   alt="Google Sheets" 
                   className="h-8 w-8"
                 />
@@ -257,8 +262,15 @@ const ResumeScreening = () => {
             <p className="text-xl mb-8">
               Let us show you how our AI-powered resume screening can save you time and help you find the best candidates.
             </p>
-            <Button asChild size="lg" variant="secondary" className="px-8">
-              <Link to="/request-demo">Request Demo</Link>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="px-8"
+              data-cal-link="mshiv/vara" 
+              data-cal-namespace="vara" 
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Request Demo
             </Button>
           </div>
         </div>
