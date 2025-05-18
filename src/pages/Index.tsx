@@ -242,11 +242,11 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
-              <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <div className="flex items-center justify-center mb-6">
                 <img 
                   src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png" 
                   alt="Google Sheets" 
-                  className="h-8 w-8"
+                  className="h-12 w-auto"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-center">Custom Google Sheet Solutions</h3>
@@ -270,11 +270,11 @@ const Index = () => {
             </div>
             
             <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6">
-              <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <div className="flex items-center justify-center mb-6">
                 <img 
                   src="https://tally.so/images/logo_v2.png" 
                   alt="Tally Forms" 
-                  className="h-8 w-8"
+                  className="h-12 w-auto"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-center">Tally Form Screening Systems</h3>
