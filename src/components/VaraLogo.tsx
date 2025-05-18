@@ -10,7 +10,7 @@ const VaraLogo = ({ className }: LogoProps) => {
     <div className={cn("flex items-center", className)}>
       <div className="bg-white p-1 rounded">
         <img 
-          src="https://varahr.com/assets/images/varahr-logo-96x96.webp" 
+          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/VaraHR%20Logo.png?raw=true" 
           alt="VaraHR Logo"
           className="h-full w-auto"
         />

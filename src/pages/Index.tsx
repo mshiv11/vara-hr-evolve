@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -33,22 +32,22 @@ const FeaturedIn = () => (
       <h3 className="text-center text-lg font-medium text-gray-700 mb-8">Featured In</h3>
       <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
         <img 
-          src="https://varahr.com/assets/images/digital-journal-logo-removebg-preview-2-240x240.webp" 
+          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/digital-journal-logo.png?raw=true" 
           alt="Digital Journal" 
           className="h-12 md:h-16 w-auto object-contain"
         />
         <img 
-          src="https://varahr.com/assets/images/associated-press-logo-1982-240x135.webp" 
+          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/associated-press-logo.png?raw=true" 
           alt="Associated Press" 
           className="h-10 md:h-14 w-auto object-contain"
         />
         <img 
-          src="https://varahr.com/assets/images/pngwing.com1-1-240x69.webp" 
+          src="https://raw.githubusercontent.com/mshiv11/vara-hr-evolve/refs/heads/main/Time%20of%20India%20logo.webp" 
           alt="Times of India" 
           className="h-8 md:h-12 w-auto object-contain"
         />
         <img 
-          src="https://varahr.com/assets/images/fox40-removebg-preview-1-240x82.webp" 
+          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/Fox40-removebg-preview.png?raw=true" 
           alt="Fox40" 
           className="h-10 md:h-14 w-auto object-contain"
         />
