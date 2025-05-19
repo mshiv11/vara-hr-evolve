@@ -34,6 +34,21 @@
     <!-- Favicon -->
     <link rel="icon" href="https://varahr.com/assets/images/varahr-logo-96x96.webp" />
     
+    <!-- Single page app redirect script -->
+    <script type="text/javascript">
+      // This script checks if we're being redirected from the 404 page
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    
     <!-- Structured data for better SEO -->
     <script type="application/ld+json">
       {
