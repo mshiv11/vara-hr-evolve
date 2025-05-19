@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -32,23 +33,28 @@ const FeaturedIn = () => (
       <h3 className="text-center text-lg font-medium text-gray-700 mb-8">Featured In</h3>
       <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
         <img 
-          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/digital-journal-logo.png?raw=true" 
+          src="https://www.digitaljournal.com/wp-content/uploads/2025/05/Digital-Journal-Logo.png" 
           alt="Digital Journal" 
           className="h-12 md:h-16 w-auto object-contain"
         />
         <img 
-          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/associated-press-logo.png?raw=true" 
+          src="https://i0.wp.com/retailgeek.com/wp-content/uploads/2020/03/ap-news-logo.png?ssl=1" 
           alt="Associated Press" 
           className="h-10 md:h-14 w-auto object-contain"
         />
         <img 
-          src="https://raw.githubusercontent.com/mshiv11/vara-hr-evolve/refs/heads/main/Time%20of%20India%20logo.webp" 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_times_of_india.svg/375px-The_times_of_india.svg.png" 
           alt="Times of India" 
           className="h-8 md:h-12 w-auto object-contain"
         />
         <img 
-          src="https://github.com/mshiv11/vara-hr-evolve/blob/main/Fox40-removebg-preview.png?raw=true" 
+          src="https://fox40.com/wp-content/uploads/sites/13/2023/07/cropped-FOX40-Logo-5.png?w=410" 
           alt="Fox40" 
+          className="h-10 md:h-14 w-auto object-contain"
+        />
+        <img 
+          src="https://spacecoastdaily.com/wp-content/uploads/2020/01/2015-scd-logo.png" 
+          alt="Space Coast Daily" 
           className="h-10 md:h-14 w-auto object-contain"
         />
       </div>
