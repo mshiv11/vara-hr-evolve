@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -32,7 +33,7 @@ const FeaturedIn = () => (
       <h3 className="text-center text-lg font-medium text-gray-700 mb-8">Featured In</h3>
       <div className="flex justify-between items-center w-full overflow-x-auto pb-4 px-4">
         <img 
-          src="https://www.digitaljournal.com/wp-content/uploads/2025/05/Digital-Journal-Logo.png" 
+          src="https://www.iadea.com/wp-content/uploads/2018/10/digital-journal-logo.png" 
           alt="Digital Journal" 
           className="h-8 w-auto object-contain mx-4"
         />
