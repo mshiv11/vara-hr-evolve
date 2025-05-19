@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -26,36 +25,36 @@ const Statistic = ({ value, label }: { value: string, label: string }) => (
   </div>
 );
 
-// Featured in publications component
+// Featured in publications component - updated for better logo visibility
 const FeaturedIn = () => (
-  <section className="py-12 bg-gray-50">
+  <section className="py-12 bg-gray-50 overflow-hidden">
     <div className="container">
       <h3 className="text-center text-lg font-medium text-gray-700 mb-8">Featured In</h3>
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+      <div className="flex justify-between items-center w-full overflow-x-auto pb-4 px-4">
         <img 
           src="https://www.digitaljournal.com/wp-content/uploads/2025/05/Digital-Journal-Logo.png" 
           alt="Digital Journal" 
-          className="h-12 md:h-16 w-auto object-contain"
+          className="h-8 w-auto object-contain mx-4"
         />
         <img 
           src="https://i0.wp.com/retailgeek.com/wp-content/uploads/2020/03/ap-news-logo.png?ssl=1" 
           alt="Associated Press" 
-          className="h-10 md:h-14 w-auto object-contain"
+          className="h-8 w-auto object-contain mx-4"
         />
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_times_of_india.svg/375px-The_times_of_india.svg.png" 
           alt="Times of India" 
-          className="h-8 md:h-12 w-auto object-contain"
+          className="h-8 w-auto object-contain mx-4"
         />
         <img 
           src="https://fox40.com/wp-content/uploads/sites/13/2023/07/cropped-FOX40-Logo-5.png?w=410" 
           alt="Fox40" 
-          className="h-10 md:h-14 w-auto object-contain"
+          className="h-8 w-auto object-contain mx-4"
         />
         <img 
           src="https://spacecoastdaily.com/wp-content/uploads/2020/01/2015-scd-logo.png" 
           alt="Space Coast Daily" 
-          className="h-10 md:h-14 w-auto object-contain"
+          className="h-8 w-auto object-contain mx-4"
         />
       </div>
     </div>
