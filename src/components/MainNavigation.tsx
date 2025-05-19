@@ -31,7 +31,7 @@ const MainNavigation = () => {
   ];
 
   const caseStudies = [
-    { name: 'Buik Hiring', href: '/case-studies/mitr-work' },
+    { name: 'Buik Hiring', href: '/case-studies/bulk-hiring' },
     { name: 'Solo Founder', href: '/case-studies/solo-founder' },
   ];
 

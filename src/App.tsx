@@ -48,7 +48,7 @@ const App = () => (
           <Route path="/features/candidate-dashboard" element={<CandidateDashboard />} />
           
           {/* Case Study Pages */}
-          <Route path="/case-studies/mitr-work" element={<MitrWork />} />
+          <Route path="/case-studies/bulk-hiring" element={<MitrWork />} />
           <Route path="/case-studies/solo-founder" element={<SoloFounder />} />
           
           {/* Catch-all route */}

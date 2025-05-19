@@ -324,7 +324,7 @@ const Index = () => {
                   How VaraHR created a custom assessment solution for Buik Hiring to efficiently evaluate hundreds of students during university recruitment drives.
                 </p>
                 <Button asChild variant="outline">
-                  <Link to="/case-studies/mitr-work">Read Case Study</Link>
+                  <Link to="/case-studies/bulk-hiring">Read Case Study</Link>
                 </Button>
               </div>
             </div>
