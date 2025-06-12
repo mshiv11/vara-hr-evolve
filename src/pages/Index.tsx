@@ -2,9 +2,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
-import { CheckCircle, ChevronRight, FileCheck, UserCheck, BarChart3, Users, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, FileCheck, UserCheck, BarChart3, Users } from "lucide-react";
 
-// Feature Card Component with new design
+// Feature Card Component
 const FeatureCard = ({ icon: Icon, title, description, link }: { icon: React.ElementType, title: string, description: string, link: string }) => (
   <Link to={link} className="group block p-8 bg-gray-900/50 border border-gray-800 rounded-2xl transition-all duration-300 hover:bg-gray-900/70 hover:border-gray-700 hover:scale-105">
     <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
@@ -18,7 +18,7 @@ const FeatureCard = ({ icon: Icon, title, description, link }: { icon: React.Ele
   </Link>
 );
 
-// Updated Stats component
+// Stats component
 const Statistic = ({ value, label }: { value: string, label: string }) => (
   <div className="text-center p-6">
     <p className="text-4xl md:text-5xl font-bold text-white mb-2">{value}</p>
@@ -26,46 +26,10 @@ const Statistic = ({ value, label }: { value: string, label: string }) => (
   </div>
 );
 
-// Updated Featured In component
-const FeaturedIn = () => (
-  <section className="py-16 bg-gray-900/30 border-y border-gray-800">
-    <div className="container">
-      <h3 className="text-center text-lg font-medium text-gray-400 mb-12">Trusted by organizations featured in</h3>
-      <div className="flex justify-center items-center gap-12 flex-wrap">
-        <img 
-          src="https://www.iadea.com/wp-content/uploads/2018/10/digital-journal-logo.png" 
-          alt="Digital Journal" 
-          className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-        />
-        <img 
-          src="https://i0.wp.com/retailgeek.com/wp-content/uploads/2020/03/ap-news-logo.png?ssl=1" 
-          alt="Associated Press" 
-          className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-        />
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_times_of_india.svg/375px-The_times_of_india.svg.png" 
-          alt="Times of India" 
-          className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-        />
-        <img 
-          src="https://fox40.com/wp-content/uploads/sites/13/2023/07/cropped-FOX40-Logo-5.png?w=410" 
-          alt="Fox40" 
-          className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-        />
-        <img 
-          src="https://spacecoastdaily.com/wp-content/uploads/2020/01/2015-scd-logo.png" 
-          alt="Space Coast Daily" 
-          className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-        />
-      </div>
-    </div>
-  </section>
-);
-
 const Index = () => {
   return (
     <MainLayout>
-      {/* Hero Section - Redesigned */}
+      {/* Hero Section with YouTube Video */}
       <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(120,119,198,0.3),_transparent_50%),radial-gradient(circle_at_80%_20%,_rgba(255,255,255,0.1),_transparent_50%),radial-gradient(circle_at_40%_40%,_rgba(120,119,198,0.2),_transparent_50%)]"></div>
@@ -124,21 +88,19 @@ const Index = () => {
             
             <div className="order-first lg:order-last">
               <div className="relative">
-                {/* Geometric pattern inspired by the reference */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl"></div>
-                <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-3xl p-8 h-96 flex items-center justify-center">
-                  <div className="grid grid-cols-6 gap-2 opacity-20">
-                    {Array.from({ length: 36 }).map((_, i) => (
-                      <div key={i} className="w-8 h-8 border border-primary/30 rounded-full animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}></div>
-                    ))}
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <BarChart3 size={40} className="text-primary" />
-                      </div>
-                      <p className="text-white font-semibold">AI-Powered Analytics</p>
-                    </div>
+                {/* YouTube Video Embed */}
+                <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-3xl overflow-hidden">
+                  <div className="aspect-video">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/QHN0NRUoIwE"
+                      title="VaraHR Demo"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
               </div>
@@ -146,9 +108,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
-      {/* Featured In Section */}
-      <FeaturedIn />
       
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-r from-primary to-blue-600">

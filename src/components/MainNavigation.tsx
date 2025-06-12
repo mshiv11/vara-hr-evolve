@@ -31,21 +31,21 @@ const MainNavigation = () => {
   ];
 
   const caseStudies = [
-    { name: 'Buik Hiring', href: '/case-studies/bulk-hiring' },
+    { name: 'Bulk Hiring', href: '/case-studies/bulk-hiring' },
     { name: 'Solo Founder', href: '/case-studies/solo-founder' },
   ];
 
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-black/90 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="container py-4 flex items-center justify-between relative">
         <Link to="/" className="flex items-center space-x-2">
           <VaraLogo className={isMobile ? "h-7 w-7" : "h-8 w-8"} />
-          <span className="text-lg md:text-xl font-bold">VaraHR</span>
+          <span className="text-lg md:text-xl font-bold text-white">VaraHR</span>
         </Link>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+          className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800"
           onClick={toggleMenu}
         >
           {isMenuOpen ? (
@@ -60,16 +60,16 @@ const MainNavigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-700 hover:text-primary transition-colors">Features</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-gray-300 hover:text-white bg-transparent data-[state=open]:bg-gray-800">Features</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gray-900 border-gray-800">
                     {features.map((feature) => (
                       <li key={feature.name}>
                         <NavigationMenuLink asChild>
                           <Link
                             to={feature.href}
                             className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-white text-gray-300"
                             )}
                           >
                             <div className="text-sm font-medium leading-none">{feature.name}</div>
@@ -81,16 +81,16 @@ const MainNavigation = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-700 hover:text-primary transition-colors">Case Studies</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-gray-300 hover:text-white bg-transparent data-[state=open]:bg-gray-800">Case Studies</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-3 p-4">
+                  <ul className="grid w-[200px] gap-3 p-4 bg-gray-900 border-gray-800">
                     {caseStudies.map((caseStudy) => (
                       <li key={caseStudy.name}>
                         <NavigationMenuLink asChild>
                           <Link
                             to={caseStudy.href}
                             className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 hover:text-white text-gray-300"
                             )}
                           >
                             <div className="text-sm font-medium leading-none">{caseStudy.name}</div>
@@ -105,17 +105,18 @@ const MainNavigation = () => {
           </NavigationMenu>
           <Link
             to="/pricing"
-            className="text-gray-700 hover:text-primary transition-colors"
+            className="text-gray-300 hover:text-white transition-colors"
           >
             Pricing
           </Link>
           <Link
             to="/faq"
-            className="text-gray-700 hover:text-primary transition-colors"
+            className="text-gray-300 hover:text-white transition-colors"
           >
             FAQ
           </Link>
           <Button 
+            className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"
             data-cal-link="mshiv/vara" 
             data-cal-namespace="vara" 
             data-cal-config='{"layout":"month_view"}'
@@ -124,14 +125,14 @@ const MainNavigation = () => {
           </Button>
         </div>
 
-        {/* Mobile menu, show/hide based on menu state */}
+        {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-b border-gray-100 py-4 shadow-lg">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-b border-gray-800 py-4 shadow-lg">
             <div className="flex flex-col space-y-3 container">
               {/* Features Dropdown */}
               <div className="relative">
                 <button 
-                  className="flex w-full items-center justify-between px-2 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                  className="flex w-full items-center justify-between px-2 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md"
                   onClick={(e) => {
                     e.stopPropagation();
                     const target = document.getElementById('features-dropdown');
@@ -143,12 +144,12 @@ const MainNavigation = () => {
                   <span>Features</span>
                   <ChevronDown className="h-4 w-4 ml-1" />
                 </button>
-                <div id="features-dropdown" className="hidden bg-gray-50 rounded-md mt-1">
+                <div id="features-dropdown" className="hidden bg-gray-800 rounded-md mt-1">
                   {features.map((feature) => (
                     <Link
                       key={feature.name}
                       to={feature.href}
-                      className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-100 rounded-md"
+                      className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {feature.name}
@@ -160,7 +161,7 @@ const MainNavigation = () => {
               {/* Case Studies Dropdown */}
               <div className="relative">
                 <button 
-                  className="flex w-full items-center justify-between px-2 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                  className="flex w-full items-center justify-between px-2 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md"
                   onClick={(e) => {
                     e.stopPropagation();
                     const target = document.getElementById('case-studies-dropdown');
@@ -172,12 +173,12 @@ const MainNavigation = () => {
                   <span>Case Studies</span>
                   <ChevronDown className="h-4 w-4 ml-1" />
                 </button>
-                <div id="case-studies-dropdown" className="hidden bg-gray-50 rounded-md mt-1">
+                <div id="case-studies-dropdown" className="hidden bg-gray-800 rounded-md mt-1">
                   {caseStudies.map((caseStudy) => (
                     <Link
                       key={caseStudy.name}
                       to={caseStudy.href}
-                      className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-100 rounded-md"
+                      className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {caseStudy.name}
@@ -188,20 +189,20 @@ const MainNavigation = () => {
               
               <Link
                 to="/pricing"
-                className="px-2 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                className="px-2 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
               </Link>
               <Link
                 to="/faq"
-                className="px-2 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                className="px-2 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
               </Link>
               <Button 
-                className="mt-2"
+                className="mt-2 bg-primary hover:bg-primary/90 text-white rounded-full"
                 data-cal-link="mshiv/vara" 
                 data-cal-namespace="vara" 
                 data-cal-config='{"layout":"month_view"}'
