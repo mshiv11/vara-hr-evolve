@@ -242,7 +242,7 @@ const Index = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Streamlined evaluation of hundreds of students during campus recruitment with custom AI assessments.
                 </p>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black transition-all duration-300">
+                <Button asChild variant="outline" className="border-white text-black bg-white hover:bg-gray-100 transition-all duration-300">
                   <Link to="/case-studies/bulk-hiring">Read Success Story</Link>
                 </Button>
               </div>
@@ -262,7 +262,7 @@ const Index = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   How one founder processed 424 applications and found perfect hires in just 24 hours.
                 </p>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black transition-all duration-300">
+                <Button asChild variant="outline" className="border-white text-black bg-white hover:bg-gray-100 transition-all duration-300">
                   <Link to="/case-studies/solo-founder">Read Success Story</Link>
                 </Button>
               </div>
