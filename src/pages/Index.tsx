@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -69,7 +68,7 @@ const Index = () => {
                 >
                   Explore Interactive Demo
                 </Button>
-                <Button asChild size="lg" variant="outline" className="px-10 py-4 text-lg font-semibold rounded-full border-white text-white hover:bg-white hover:text-black transition-all duration-300">
+                <Button asChild size="lg" variant="outline" className="px-10 py-4 text-lg font-semibold rounded-full border-white text-black bg-white hover:bg-gray-100 transition-all duration-300">
                   <Link to="/case-studies/solo-founder">View Portfolio</Link>
                 </Button>
               </div>
