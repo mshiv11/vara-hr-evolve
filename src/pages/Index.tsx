@@ -65,7 +65,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex justify-center">
             <Button
               size="lg"
               className="px-8 py-3 text-base font-semibold rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
@@ -74,9 +74,6 @@ const Index = () => {
               data-cal-config='{"layout":"month_view"}'
             >
               Book Free Demo
-            </Button>
-            <Button asChild size="lg" variant="outline" className="px-8 py-3 text-base font-semibold rounded-full border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400">
-              <Link to="#how-it-works">See How It Works</Link>
             </Button>
           </div>
         </div>
