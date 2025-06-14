@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -115,19 +114,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-16 bg-gray-50/70">
-        <div className="container">
-          <h3 className="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-8">TRUSTED BY LEADING COMPANIES</h3>
-          <div className="flex justify-center items-center gap-12 md:gap-16 flex-wrap opacity-60 grayscale">
-            <img src="/Time of India logo.webp" alt="Time of India" className="h-7" />
-            <img src="/associated-press-logo.png" alt="Associated Press" className="h-8" />
-            <img src="/digital-journal-logo.png" alt="Digital Journal" className="h-8" />
-            <img src="/Fox40-removebg-preview.png" alt="Fox40" className="h-10" />
-          </div>
-        </div>
-      </section>
-      
       {/* Final CTA */}
       <section className="py-24 bg-white">
         <div className="container text-center">
