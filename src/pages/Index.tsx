@@ -1,7 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
-import { Rocket, CalendarCheck2, Target, Bot, Workflow, BarChartBig } from "lucide-react";
+import { Rocket, CalendarCheck2, Target, Bot, Workflow, BarChartBig, CheckCircle, Users, Clock, Star } from "lucide-react";
 
 // New Feature Card Component based on inspiration
 const FeatureCard = ({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) => (
@@ -37,50 +38,88 @@ const Index = () => {
 
   return (
     <MainLayout>
-      {/* Hero Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-white to-gray-50 text-center">
-        <div className="container">
+      {/* Hero Section with Gradient */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 text-center relative overflow-hidden">
+        {/* Background Gradient Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
+        
+        <div className="container relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 max-w-4xl mx-auto">
             Automate Your Hiring.
             <br />
             <span className="text-primary">Save Weeks.</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Join hundreds of innovative companies that have cut their hiring time from months to days. Our AI-powered platform automates tedious tasks, so you can focus on what matters most: finding the perfect candidate.
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join 500+ innovative companies that have cut their hiring time from months to days. Our AI-powered platform automates tedious tasks, so you can focus on finding the perfect candidate.
           </p>
-          <div className="flex justify-center gap-4">
+          
+          {/* Trust Signals */}
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <CheckCircle size={16} className="text-green-500" />
+              <span>80% faster screening</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users size={16} className="text-blue-500" />
+              <span>500+ companies trust us</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-purple-500" />
+              <span>Setup in 15 minutes</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star size={16} className="text-yellow-500" />
+              <span>4.9/5 customer rating</span>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               size="lg"
-              className="px-8 py-3 text-base font-semibold rounded-full"
+              className="px-8 py-3 text-base font-semibold rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
               data-cal-link="mshiv/vara"
               data-cal-namespace="vara"
               data-cal-config='{"layout":"month_view"}'
             >
-              Request a Demo
+              Book Free Demo
             </Button>
             <Button asChild size="lg" variant="outline" className="px-8 py-3 text-base font-semibold rounded-full border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400">
-              <Link to="#how-it-works">How It Works</Link>
+              <Link to="#how-it-works">See How It Works</Link>
             </Button>
           </div>
+          
+          <p className="text-sm text-gray-500 mt-4">
+            ✨ No credit card required • Free 14-day trial • Cancel anytime
+          </p>
         </div>
       </section>
 
-      {/* As Seen On Section */}
-      <section className="py-16 bg-gray-50/70">
-        <div className="container">
-          <h3 className="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-10">As Seen On</h3>
-          <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_1rem,_black_calc(100%-1rem),transparent_100%)]">
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll">
+      {/* As Seen On Section - Enhanced */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container relative z-10">
+          <h3 className="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-12">As Seen On</h3>
+          <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 animate-scroll">
               {logos.map((logo) => (
-                <li key={logo.alt}>
-                  <img src={logo.src} alt={logo.alt} className="h-8 max-w-none filter grayscale hover:grayscale-0 transition-all duration-300" />
+                <li key={logo.alt} className="flex-shrink-0">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className="h-10 w-auto max-w-none filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100" 
+                  />
                 </li>
               ))}
             </ul>
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll" aria-hidden="true">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 animate-scroll" aria-hidden="true">
               {logos.map((logo) => (
-                <li key={logo.alt}>
-                  <img src={logo.src} alt={logo.alt} className="h-8 max-w-none filter grayscale hover:grayscale-0 transition-all duration-300" />
+                <li key={`${logo.alt}-duplicate`} className="flex-shrink-0">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className="h-10 w-auto max-w-none filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100" 
+                  />
                 </li>
               ))}
             </ul>
@@ -88,8 +127,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 bg-white" id="features">
+      {/* Features Section with Gradient */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50/30" id="features">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
@@ -112,7 +151,7 @@ const Index = () => {
       </section>
       
       {/* How It Works Section */}
-      <section className="py-24 bg-gray-50/70" id="how-it-works">
+      <section className="py-24 bg-gradient-to-br from-purple-50/30 to-pink-50/30" id="how-it-works">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">How It Works</h2>
@@ -144,24 +183,27 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-white">
+      {/* Final CTA with Gradient */}
+      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
         <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-2xl mx-auto">
               Stop Searching. Start Hiring.
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+            <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">
               See for yourself how Vara can reduce your time-to-hire by up to 80%. Schedule a free, no-obligation demo with our team today.
             </p>
             <Button 
               size="lg" 
-              className="px-10 py-3 text-base font-semibold rounded-full"
+              className="px-10 py-3 text-base font-semibold rounded-full bg-white text-blue-600 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
               data-cal-link="mshiv/vara" 
               data-cal-namespace="vara" 
               data-cal-config='{"layout":"month_view"}'
             >
               Request a Free Demo
             </Button>
+            <p className="text-sm text-blue-200 mt-4">
+              ⚡ Book in 30 seconds • Meet with our hiring experts • Get personalized recommendations
+            </p>
         </div>
       </section>
     </MainLayout>
