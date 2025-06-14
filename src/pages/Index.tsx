@@ -29,10 +29,10 @@ const HowItWorksStep = ({ number, title, description, icon: Icon }: { number: st
 
 const Index = () => {
   const logos = [
-    { src: "/Time of India logo.webp", alt: "Time of India", height: "h-7" },
-    { src: "/associated-press-logo.png", alt: "Associated Press", height: "h-8" },
-    { src: "/digital-journal-logo.png", alt: "Digital Journal", height: "h-8" },
-    { src: "/Fox40-removebg-preview.png", alt: "Fox40", height: "h-10" },
+    { src: "/Time of India logo.webp", alt: "Time of India" },
+    { src: "/associated-press-logo.png", alt: "Associated Press" },
+    { src: "/digital-journal-logo.png", alt: "Digital Journal" },
+    { src: "/Fox40-removebg-preview.png", alt: "Fox40" },
   ];
 
   return (
@@ -65,22 +65,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trusted By Section */}
+      {/* As Seen On Section */}
       <section className="py-16 bg-gray-50/70">
         <div className="container">
-          <h3 className="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-10">TRUSTED BY INNOVATIVE COMPANIES</h3>
+          <h3 className="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-10">As Seen On</h3>
           <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_1rem,_black_calc(100%-1rem),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll">
               {logos.map((logo) => (
                 <li key={logo.alt}>
-                  <img src={logo.src} alt={logo.alt} className={`${logo.height} max-w-none`} />
+                  <img src={logo.src} alt={logo.alt} className="h-8 max-w-none filter grayscale hover:grayscale-0 transition-all duration-300" />
                 </li>
               ))}
             </ul>
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll" aria-hidden="true">
               {logos.map((logo) => (
                 <li key={logo.alt}>
-                  <img src={logo.src} alt={logo.alt} className={`${logo.height} max-w-none`} />
+                  <img src={logo.src} alt={logo.alt} className="h-8 max-w-none filter grayscale hover:grayscale-0 transition-all duration-300" />
                 </li>
               ))}
             </ul>
