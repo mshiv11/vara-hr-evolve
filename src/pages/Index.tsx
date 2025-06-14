@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
@@ -38,8 +37,8 @@ const Index = () => {
 
   return (
     <MainLayout>
-      {/* Hero Section with Gradient */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 text-center relative overflow-hidden">
+      {/* Hero Section with F8FBFF Gradient */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-[#F8FBFF] via-blue-50 to-purple-50 text-center relative overflow-hidden">
         {/* Background Gradient Elements */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl"></div>
@@ -52,7 +51,7 @@ const Index = () => {
             <span className="text-primary">Save Weeks.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join 500+ innovative companies that have cut their hiring time from months to days. Our AI-powered platform automates tedious tasks, so you can focus on finding the perfect candidate.
+            Join innovative companies that have cut their hiring time from months to days. Our AI-powered automation eliminates tedious tasks, so you can focus on finding the perfect candidate.
           </p>
           
           {/* Trust Signals */}
@@ -63,11 +62,7 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-2">
               <Users size={16} className="text-blue-500" />
-              <span>500+ companies trust us</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock size={16} className="text-purple-500" />
-              <span>Setup in 15 minutes</span>
+              <span>Trusted by leading companies</span>
             </div>
             <div className="flex items-center gap-2">
               <Star size={16} className="text-yellow-500" />
@@ -89,10 +84,6 @@ const Index = () => {
               <Link to="#how-it-works">See How It Works</Link>
             </Button>
           </div>
-          
-          <p className="text-sm text-gray-500 mt-4">
-            ✨ No credit card required • Free 14-day trial • Cancel anytime
-          </p>
         </div>
       </section>
 
@@ -107,7 +98,7 @@ const Index = () => {
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="h-10 w-auto max-w-none filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100" 
+                    className="h-12 w-auto max-w-none filter grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100 object-contain" 
                   />
                 </li>
               ))}
@@ -118,7 +109,7 @@ const Index = () => {
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="h-10 w-auto max-w-none filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100" 
+                    className="h-12 w-auto max-w-none filter grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100 object-contain" 
                   />
                 </li>
               ))}
@@ -183,14 +174,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA with Gradient */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+      {/* Final CTA with F8FBFF Gradient */}
+      <section className="py-24 bg-gradient-to-br from-[#F8FBFF] via-blue-600 to-purple-600 text-white">
         <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-2xl mx-auto">
               Stop Searching. Start Hiring.
             </h2>
             <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">
-              See for yourself how Vara can reduce your time-to-hire by up to 80%. Schedule a free, no-obligation demo with our team today.
+              See for yourself how our automation can reduce your time-to-hire by up to 80%. Schedule a free consultation with our team today.
             </p>
             <Button 
               size="lg" 
@@ -202,7 +193,7 @@ const Index = () => {
               Request a Free Demo
             </Button>
             <p className="text-sm text-blue-200 mt-4">
-              ⚡ Book in 30 seconds • Meet with our hiring experts • Get personalized recommendations
+              ⚡ Book in 30 seconds • Meet with our automation experts • Get personalized recommendations
             </p>
         </div>
       </section>
