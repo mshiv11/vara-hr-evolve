@@ -37,13 +37,8 @@ const Index = () => {
 
   return (
     <MainLayout>
-      {/* Hero Section with F8FBFF Gradient */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-[#F8FBFF] via-blue-50 to-purple-50 text-center relative overflow-hidden">
-        {/* Background Gradient Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
-        
+      {/* Hero Section */}
+      <section className="py-24 md:py-32 bg-white text-center relative overflow-hidden">
         <div className="container relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 max-w-4xl mx-auto">
             Automate Your Hiring.
@@ -174,8 +169,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA with F8FBFF Gradient */}
-      <section className="py-24 bg-gradient-to-br from-[#F8FBFF] via-blue-600 to-purple-600 text-white">
+      {/* Final CTA */}
+      <section className="py-24 bg-blue-600 text-white">
         <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-2xl mx-auto">
               Stop Searching. Start Hiring.
