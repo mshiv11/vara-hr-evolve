@@ -29,10 +29,9 @@ const HowItWorksStep = ({ number, title, description, icon: Icon }: { number: st
 
 const Index = () => {
   const logos = [
-    { src: "/Time of India logo.webp", alt: "Time of India" },
-    { src: "/associated-press-logo.png", alt: "Associated Press" },
-    { src: "/digital-journal-logo.png", alt: "Digital Journal" },
-    { src: "/Fox40-removebg-preview.png", alt: "Fox40" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_times_of_india.svg/485px-The_times_of_india.svg.png", alt: "The Times of India" },
+    { src: "https://www.digitaljournal.com/wp-content/uploads/2025/05/Digital-Journal-Logo-e1745859786345.png", alt: "Digital Journal" },
+    { src: "https://dims.apnews.com/dims4/default/1d91f0b/2147483647/strip/true/crop/2851x1534+0+0/resize/480x258!/format/webp/quality/90/?url=http%3A%2F%2Fassets.apnews.com%2F22%2F25%2F9576fafb4e768552fed602a60238%2Fap-pri-wordmarktagline-rgb-dbg.png", alt: "Associated Press" },
   ];
 
   return (
