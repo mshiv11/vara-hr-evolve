@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">Privacy Policy</h1>
             <p className="text-xl text-gray-700">
-              Last Updated: May 3, 2025
+              Last Updated: June 14, 2025
             </p>
           </div>
         </div>
@@ -22,7 +22,21 @@ const PrivacyPolicy = () => {
             <p>
               VaraHR ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, products, or services ("Services"). Please read this Privacy Policy carefully. By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
             </p>
-            
+
+            <h2>Use of Cookies and Online Data Partners</h2>
+            <p>
+              When you visit or log in to our website, cookies and similar technologies may be used by our online data partners or vendors to associate these activities with other personal information they or others have about you, including by association with your email. We (or service providers on our behalf) may then send communications and marketing to these email. You may opt out of receiving this advertising by visiting <a href="https://app.retention.com/optout" target="_blank" rel="noopener noreferrer">https://app.retention.com/optout</a>.
+            </p>
+            <p>
+              If you are located in the EU/EEA or require GDPR-specific privacy measures, you also have the option to opt out of the collection of your personal data in compliance with GDPR. To exercise this option, please visit <a href="https://www.rb2b.com/rb2b-gdpr-opt-out" target="_blank" rel="noopener noreferrer">https://www.rb2b.com/rb2b-gdpr-opt-out</a>.
+            </p>
+            <p>
+              <strong>
+                Please note:
+              </strong>{" "}
+              The language above is designed to ensure transparency regarding how cookies and similar technologies may be used by our online partners or vendors. We, VaraHR, do not directly contact individuals on your behalf based on such data collection. We encourage you to review this policy with your legal team and ensure that your cookie banner or compliance tool (such as CookiePro) is regularly updated and synchronized with your privacy practices.
+            </p>
+
             <h2>Information We Collect</h2>
             <p>We may collect information about you in a variety of ways, including:</p>
             
