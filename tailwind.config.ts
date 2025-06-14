@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -156,7 +157,12 @@ export default {
 					'50%': {
 						boxShadow: '0 0 40px rgba(0, 122, 255, 0.6)'
 					}
-				}
+				},
+				'scroll': {
+          'to': {
+            transform: 'translate(calc(-100% - 2rem))'
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -165,6 +171,7 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out',
 				'slide-up': 'slide-up 0.6s ease-out',
 				'glow': 'glow 2s ease-in-out infinite',
+				'scroll': 'scroll 40s linear infinite',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

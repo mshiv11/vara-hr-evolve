@@ -28,18 +28,25 @@ const HowItWorksStep = ({ number, title, description, icon: Icon }: { number: st
 );
 
 const Index = () => {
+  const logos = [
+    { src: "/Time of India logo.webp", alt: "Time of India", height: "h-7" },
+    { src: "/associated-press-logo.png", alt: "Associated Press", height: "h-8" },
+    { src: "/digital-journal-logo.png", alt: "Digital Journal", height: "h-8" },
+    { src: "/Fox40-removebg-preview.png", alt: "Fox40", height: "h-10" },
+  ];
+
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="py-24 md:py-32 bg-white text-center">
+      <section className="py-24 md:py-32 bg-gradient-to-b from-white to-gray-50 text-center">
         <div className="container">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 max-w-4xl mx-auto">
             Automate Your Hiring.
             <br />
-            <span className="text-primary">Save Time.</span>
+            <span className="text-primary">Save Weeks.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Empowering recruiters and hiring managers to focus on people, not paperwork. Transform your recruitment process with AI-powered automation.
+            Join hundreds of innovative companies that have cut their hiring time from months to days. Our AI-powered platform automates tedious tasks, so you can focus on what matters most: finding the perfect candidate.
           </p>
           <div className="flex justify-center gap-4">
             <Button
@@ -52,14 +59,37 @@ const Index = () => {
               Request a Demo
             </Button>
             <Button asChild size="lg" variant="outline" className="px-8 py-3 text-base font-semibold rounded-full border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400">
-              <Link to="#features">How It Works</Link>
+              <Link to="#how-it-works">How It Works</Link>
             </Button>
           </div>
         </div>
       </section>
 
+      {/* Trusted By Section */}
+      <section className="py-16 bg-gray-50/70">
+        <div className="container">
+          <h3 className="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-10">TRUSTED BY INNOVATIVE COMPANIES</h3>
+          <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_1rem,_black_calc(100%-1rem),transparent_100%)]">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll">
+              {logos.map((logo) => (
+                <li key={logo.alt}>
+                  <img src={logo.src} alt={logo.alt} className={`${logo.height} max-w-none`} />
+                </li>
+              ))}
+            </ul>
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll" aria-hidden="true">
+              {logos.map((logo) => (
+                <li key={logo.alt}>
+                  <img src={logo.src} alt={logo.alt} className={`${logo.height} max-w-none`} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-24 bg-gray-50/70" id="features">
+      <section className="py-24 bg-white" id="features">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
@@ -82,7 +112,7 @@ const Index = () => {
       </section>
       
       {/* How It Works Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gray-50/70" id="how-it-works">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">How It Works</h2>
@@ -118,10 +148,10 @@ const Index = () => {
       <section className="py-24 bg-white">
         <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 max-w-2xl mx-auto">
-              Ready to Transform Your Hiring Process?
+              Stop Searching. Start Hiring.
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-              Join the recruitment revolution and discover what AI-powered hiring can do for your organization.
+              See for yourself how Vara can reduce your time-to-hire by up to 80%. Schedule a free, no-obligation demo with our team today.
             </p>
             <Button 
               size="lg" 
@@ -130,7 +160,7 @@ const Index = () => {
               data-cal-namespace="vara" 
               data-cal-config='{"layout":"month_view"}'
             >
-              Start Your Transformation
+              Request a Free Demo
             </Button>
         </div>
       </section>
